@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Info</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello World</h1>
+        
+        <div class="info-card">
+            <h2 style="color: #667eea; margin-bottom: 1rem;">Info about system</h2>
+            
+            <div id="system-info" 
+                 hx-post="/api/system-info" 
+                 hx-trigger="load"
+                 hx-swap="innerHTML">
+                <div class="loading"></div>
+                <p class="loading-text">Loading data...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

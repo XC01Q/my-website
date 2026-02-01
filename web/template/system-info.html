@@ -1,0 +1,64 @@
+<div class="info-grid">
+    <div class="info-item">
+        <div class="info-label">Browser</div>
+        <div class="info-value">{{.Browser}}</div>
+    </div>
+    <div class="info-item">
+        <div class="info-label">OS</div>
+        <div class="info-value">{{.OS}}</div>
+    </div>
+    <div class="info-item">
+        <div class="info-label">IP address</div>
+        <div class="info-value">{{.IP}}</div>
+    </div>
+    <div class="info-item">
+        <div class="info-label">Language</div>
+        <div class="info-value">{{.Language}}</div>
+    </div>
+</div>
+
+<div class="info-grid" style="margin-top: 1.5rem;" id="client-data-grid">
+</div>
+
+<script>
+    const clientDataStr = document.body.getAttribute('data-client-info');
+
+    const data = {
+        screenWidth: window.screen.width,
+        screenHeight: window.screen.height,
+        viewportWidth: window.innerWidth,
+        viewportHeight: window.innerHeight,
+        platform: navigator.platform,
+        language: navigator.language,
+        colorDepth: window.screen.colorDepth,
+        pixelRatio: window.devicePixelRatio
+    };
+    
+    const clientGrid = document.getElementById('client-data-grid');
+    clientGrid.innerHTML = `
+        <div class="info-item">
+            <div class="info-label">Screen resolution</div>
+            <div class="info-value">${data.screenWidth} × ${data.screenHeight}</div>
+        </div>
+        <div class="info-item">
+            <div class="info-label">Window size</div>
+            <div class="info-value">${data.viewportWidth} × ${data.viewportHeight}</div>
+        </div>
+        <div class="info-item">
+            <div class="info-label">Color depth</div>
+            <div class="info-value">${data.colorDepth} бит</div>
+        </div>
+        <div class="info-item">
+            <div class="info-label">Pixel Ratio</div>
+            <div class="info-value">${data.pixelRatio}x</div>
+        </div>
+        <div class="info-item">
+            <div class="info-label">Platform</div>
+            <div class="info-value">${data.platform}</div>
+        </div>
+        <div class="info-item">
+            <div class="info-label">Browser language</div>
+            <div class="info-value">${data.language}</div>
+        </div>
+    `;
+</script>
