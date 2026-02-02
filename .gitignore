@@ -23,6 +23,18 @@ go.work.sum
 
 # env file
 .env
+.env.*
 
 # Editor/IDE
 .idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Docker
+tmp/
+.air.toml
+
+# Build artifacts
+/server

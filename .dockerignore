@@ -1,0 +1,40 @@
+# Git
+.git
+.gitignore
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Go
+*.test
+*.out
+coverage.*
+*.coverprofile
+profile.cov
+
+# Build artifacts
+tmp/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Docker
+Dockerfile*
+docker-compose*.yml
+.docker
+
+# Development
+.air.toml
+.env
+.env.*
+*.log
+
+# Documentation
+*.md
+!README.md
+LICENSE
